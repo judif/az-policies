@@ -9,7 +9,7 @@
     "principalIds": {
         "type": "array",
         "metadata": {
-            "description": "The list of users allowed for role assignments",
+            "description": "The list of dedicated users allowed for role assignments",
             "displayName": "Allowed Principals Ids"
         },
         "defaultValue": [
