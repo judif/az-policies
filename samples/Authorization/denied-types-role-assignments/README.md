@@ -4,7 +4,7 @@ This policy defines an deny list of types for role assignments that can be used 
 
 ## Deploy with Azure Portal
 
-![Deploy to Azure](https://aka.ms/deploytoazurebutton)(https://portal.azure.com/#blade/Microsoft_Azure_Policy/CreatePolicyDefinitionBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjudif%2Faz-policies%2Fmain%2Fsamples%2FAuthorization%2Fdenied-types-role-assignments%2Fazurepolicy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/CreatePolicyDefinitionBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fjudif%2Faz-policies%2Fmain%2Fsamples%2FAuthorization%2Fdenied-types-role-assignments%2Fazurepolicy.json)
 
 ## Deploy with CLI
 
