@@ -1,0 +1,19 @@
+{
+    "principalTypes": {
+        "type": "array",
+        "metadata": {
+            "description": "The list of types (principalType) to be denied for role assignments",
+            "displayName": "Denied Principal Types"
+        }
+    },
+    "principalIds": {
+        "type": "array",
+        "metadata": {
+            "description": "The list of users allowed for role assignments",
+            "displayName": "Allowed Principals Ids"
+        },
+        "defaultValue": [
+            "00000000-0000-0000-0000-000000000000"
+        ]
+    }
+}
