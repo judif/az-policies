@@ -1,19 +1,20 @@
-Connect-AzureAD -TenantId "..." -ApplicationId "..." -CertificateThumbprint "..."
+Connect-AzAccount -identity
 
 # Get a list of all users in the tenant
-$groups = Get-AzureADGroup -SearchString "group-"
+$groups = Get-AzADGroup -SearchString "group-"
 
 #Loop through each user and get their group memberships
 $output += "Group,User Name,Email,Object Id,Type," + "`n"
 foreach ($group in $groups) {
   #Get the user's group memberships
-  $users = Get-AzureADGroupMember -ObjectId $group.ObjectId
+  $users = Get-AzADGroupMember -ObjectId $group.Id
 
   #Add the user's display name and group memberships to the output 
+    #$output += "$($group.DisplayName);"
     foreach ($user in $users) { 
-      $output += "$($group.DisplayName),$($user.DisplayName),$($user.UserPrincipalName),$($user.ObjectId),$($user.ObjectType)," + "`n" } 
+    	$output += "$($group.DisplayName),$($user.DisplayName),$($user.UserPrincipalName),$($user.Id),$($user.ObjectType)," + "`n" } 
     }
 
 #Save the output string to a text file
 $output 
-#| Out-File -FilePath "C:\..."
+#| Out-File -FilePath "C:\Users\jufreiberger\Downloads\UsersAndGroups.csv"
